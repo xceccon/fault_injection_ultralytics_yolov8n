@@ -4,7 +4,7 @@ from concurrent.futures import ThreadPoolExecutor
 from ultralytics import YOLO
 
 # Paths and configurations
-original_model_path = "yolov8n_mess.pt"  # Path to the model
+original_model_path = "yolov8n.pt"  
 output_dir = "bitflip_tests"
 os.makedirs(output_dir, exist_ok=True)
 
