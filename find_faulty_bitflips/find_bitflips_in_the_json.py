@@ -14,8 +14,11 @@ def analyze_bitflip_results(file_path):
             models_loaded += 1
 
             detections = entry.get("detections", {})
+            if not detections:
+                continue
+
             if not isinstance(detections, dict):
-                print(f"Unexpected detections format at entry {entry['global_bit_index']}: {detections}")
+                print(f"Unexpected detections format at entry {entry['bit_index']}: {detections}")
                 continue
 
             person_count = detections.get("person", 0)
@@ -23,8 +26,6 @@ def analyze_bitflip_results(file_path):
 
             if person_count != 2 or tie_count != 1 or len(detections) > 2:
                 unexpected_detections.append({
-                    "global_bit_index": entry["global_bit_index"],
-                    "byte_index": entry["byte_index"],
                     "bit_index": entry["bit_index"],
                     "detections": detections
                 })
