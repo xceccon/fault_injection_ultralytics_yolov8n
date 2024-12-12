@@ -11,3 +11,5 @@ with open(output_file, 'w') as f:
         f.write(f"{name}: {layer}\n")
 
 print(f"Model layers have been saved to '{output_file}'. Open the file to view the layers.")
+
+print(model.model)
