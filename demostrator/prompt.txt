@@ -1,5 +1,0 @@
-make me a react component which is a float 32 bitflip demo. So by default it will generate a random number from -1 to 1 which represents a weight. It will then represent that number in float32 written but each number is in a little square. 
-
-when you click on one of the boxes, it bitflips it, and it recalculates the decimal number. 
-
-The aim is to showcase how big of an impact bitflipping one of the bits of a float32 can have
