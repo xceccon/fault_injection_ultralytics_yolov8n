@@ -206,7 +206,6 @@ const Float32BitFlipDemo = () => {
         ))}
       </div>
       <div style={styles.bitsRow}>
-        <span style={styles.instruction}>Bitflip egiteko, click egin bit baten gainean -></span>
         {flippedBits.map((bit, index) => (
           <div
             key={index}
